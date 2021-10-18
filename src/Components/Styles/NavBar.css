@@ -1,0 +1,23 @@
+/* Import from URL */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.navBar{
+    background-image: linear-gradient(to bottom, var(--mainTheme)50%, #222);
+    padding: 10px 20px;
+    color: white;
+    font-weight: 900;
+}
+
+.navBarText{
+    font-weight: 800;
+    padding: 5px 10px;
+    user-select: none !important;
+    font-size: 30px;
+}
