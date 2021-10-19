@@ -4,7 +4,5 @@
 }
 
 body{
-  background-image: linear-gradient(to bottom, var(--mainBG)50%, #fff);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: var(--mainBG);
 }
