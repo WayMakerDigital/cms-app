@@ -1,7 +1,10 @@
+#profile{
+    display: flex;
+}
 
 .profileSection{
     background-color: white;
-    width: 100%;
+    width: 150%;
     height: fit-content;
     margin: 15px;
     padding: 20px;
@@ -72,16 +75,17 @@ h6{
 }
 
 .moreBtn{
-    border: none;
-    background-color: var(--mainTheme);
-    width: 100%;
-    color: rgb(255, 255, 255);
-    padding: 10px 20px;
-    font-size: 14px;
+    border: none !important;
+    background-color: var(--mainTheme) !important;
+    width: 100% !important;
+    text-decoration: none !important;
+    color: rgb(255, 255, 255) !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
     font-weight: 900;
-    margin-top: 15px;
-    border-radius: 5px;
-    text-transform: uppercase;
+    margin-top: 100px !important;
+    border-radius: 5px !important;
+    text-transform: uppercase !important;
     transition: all 0.2s ease;
 }
 .moreBtn:hover{
@@ -93,7 +97,7 @@ h6{
 /* Blog Post View */
 .blogTitle{
     font-weight: 800;
-    font-size: 35px;
+    font-size: 32px;
     user-select: none;
     margin-bottom: 5px;
 }

@@ -1,17 +1,13 @@
-import React, { Component } from 'react';
-import './Styles/Profile.css';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import Suggestion from './Suggestion';
+import './Styles/Profile.css';
 
 function Profile() {
 
-    // View All Events.
-    const viewAll = (event) => {
-        document.querySelector('#profile').style.display = 'none';
-        document.querySelector('#all').style.display = 'inline-block';
-    }
     
     // All Variables.
-    const authBadge = 'AUTHOR';
+    const authBadge = 'DEMONSTRATION';
     var userName = 'Hackathon';
     var title = 'How We Made a CMS App in Less Than a Month that actually *kinda* works!';
     var readTime = '<5 Minute Read';
@@ -22,12 +18,12 @@ function Profile() {
 
     return(
         // Profile Section
-        <div id='profile' style={{display: 'flex'}}>
+        <div id='profile'>
             <div className='profileSection'>
                 <h1 className='authorName'>{userName}</h1>
                 <h6 className='authorBadge'>{authBadge}</h6>
                 <p className='aboutSection'>{authorDesc}</p>
-                <button className='moreBtn' onClick={viewAll}>More by {userName}</button>
+                <Link to='/allblogs' className='moreBtn'>View All by {userName}</Link>
                 <div className='suggestionContainer'>
                     <h2 className='suggText'>Suggestions</h2>
                     <Suggestion className='individualSuggestion'/>
@@ -87,3 +83,4 @@ function Profile() {
 }
 
 export default Profile;
+export var readTime;

@@ -9,7 +9,7 @@ function Suggestion() {
 
     return (
         <div>
-            <div className='grid'>
+            <div className='suggestedContainer'>
                 <div className='blogPreview'>
                     <h3>{blogSuggestionTitle}</h3>
                     <p>{blogSuggestionDescription}</p>

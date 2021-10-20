@@ -1,20 +1,19 @@
 /* The Actual Blog */
 .blogPreview {
-    border-radius: 5px;
-    background-color: white;
-    padding: 10px;
-    height: fit-content;
-    padding: 20px;
-    width: 350px;
-    margin: 10px;
+    border-radius: 5px !important;
+    background-color: white !important;
+    height: fit-content !important;
+    padding: 20px !important;
+    width: 94.5% !important;
+    margin: 10px !important;
 }
 
 .goToBtn{
     border: none;
     background-color: #eaeaea;
-    width: 100%;
+    width: 100% !important;
     color: black;
-    padding: 10px 20px;
+    padding: 10px 20px !important;
     font-size: 14px;
     font-weight: 900;
     margin-top: 15px;

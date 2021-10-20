@@ -1,0 +1,49 @@
+.allCont{
+    display: none;
+    align-items: center;
+}
+
+/* Keeps the content evenly spaced */
+.marginBox{
+    margin-left: 7px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.blogSnippet{
+    display: inline-flex;
+    border-radius: 7px;
+    background-color: white;
+    margin: 7px;
+    align-content: center;
+    padding: 10px;
+    height: fit-content;
+    width: 406px;
+    align-items: center;
+    transition: all 0.2s ease !important;
+    border: 5px solid white;
+}
+
+.blogPost{
+    margin: 0 auto !important;
+    display: block;
+    font-size: 15px;
+    width: 100%;
+}
+.blogSnippet:hover{
+    backdrop-filter: blur(10px);
+    z-index: 99;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.biggerFont{
+    font-size: 150%;
+    font-weight: 800;
+}
+.blogImg{
+    width: 100%;
+    align-self: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
