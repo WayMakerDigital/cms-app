@@ -77,6 +77,7 @@ function Profile() {
                         fames ac turpis egestas. Integer venenatis efficitur lorem ut porta. Nullam vitae hendrerit ante, vitae scelerisque mauris.
                         </p>
                 </div>
+                <Link to='/CreatePost' className='moreBtn'>Create New Post</Link>
             </div>
         </div>
     )
