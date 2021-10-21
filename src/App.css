@@ -1,6 +1,6 @@
 :root{
   --mainTheme: #19181e;
-  --mainBG: #eee;
+  --mainBG: rgb(224, 224, 224);
 }
 
 body{

@@ -14,11 +14,11 @@
     display: inline-flex;
     border-radius: 7px;
     background-color: white;
-    margin: 7px;
+    margin: 10px;
     align-content: center;
     padding: 10px;
     height: fit-content;
-    width: 406px;
+    width: 538px;
     align-items: center;
     transition: all 0.2s ease !important;
     border: 5px solid white;
@@ -33,7 +33,7 @@
 .blogSnippet:hover{
     backdrop-filter: blur(10px);
     z-index: 99;
-    transform: scale(1.02);
+    transform: scale(1.03);
     cursor: pointer;
 }
 

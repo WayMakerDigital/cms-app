@@ -1,6 +1,6 @@
 import './App.css';
 import Profile from './Components/Profile';
-import AllBlogs from './Components/AllBlogs';
+import SingleBlogView from './Components/SinglePostView';
 
 function App() {
 
@@ -8,7 +8,6 @@ function App() {
     <div className="App">
       {/* Add Modules here */}
       <Profile />
-      <AllBlogs />
     </div>
   );
 }

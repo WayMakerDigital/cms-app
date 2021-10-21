@@ -12,6 +12,11 @@ function AllBlogs() {
               <Blog />   
               <Blog /> 
               <Blog /> 
+              <Blog />   
+              <Blog />   
+              <Blog /> 
+              <Blog /> 
+              <Blog />   
             </div>  
         </div>
     )
