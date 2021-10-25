@@ -3,7 +3,7 @@ import './Styles/Profile.css'
 function SinglePostView() {
 
     var title = 'How We Made a CMS App in Less Than a Month that actually *kinda* works!';
-    var readTime = '<5 Minute Read';
+    var readTime = '<2 Minute Read';
     var sh1 = 'The Process';
     var sh2 = 'Any Issues we Faced';
     var sh3 = ' In Conclusion';
