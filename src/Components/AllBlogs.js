@@ -1,9 +1,11 @@
 import React from 'react';
 import Blog from './Blog';
-import './Styles/AllBlogs.css'
+import './Styles/AllBlogs.css';
 
 
 function AllBlogs() {
+
+
 
     return(
         <div className='marginBox'>

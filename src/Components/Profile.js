@@ -26,6 +26,7 @@ function Profile() {
                     <Suggestion />
                     <Suggestion />
                 </div>
+                <Link to='/CreatePost' className='moreBtn'>Create New Post</Link>
             </div>
             <SinglePostView />
         </div>
