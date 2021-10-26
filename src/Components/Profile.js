@@ -6,6 +6,20 @@ import SinglePostView from './SinglePostView';
 
 function Profile() {
 
+    const test = () => {
+        fetch('http://localhost:8000/test', {
+            method: "get",
+            headers: {
+                'Content-type': 'application/json'
+            },
+        })
+        .then(res => {
+            const tester = res.data;
+            console.log(tester);
+          });
+
+    }
+
     
     // All Variables.
     const authBadge = 'author';

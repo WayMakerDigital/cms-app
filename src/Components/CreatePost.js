@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import { useState } from 'react';
 import './Styles/CreatePost.css'
 
@@ -18,18 +19,20 @@ function CreatePost() {
 
     }
 
-    const submitButton = (e) => {
+    const submitButton = async (e) => {
         e.preventDefault();
-
-        fetch('http://localhost:8000/create', {
-            method: "POST",
-            headers: {
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify(post)
-        })
-        .then((result) => result.json())
-        .then((info) => { console.log(info); })
+        console.log(post);
+        const response = await axios.post('http://localhost:8000/create', post);
+        console.log(response);
+        // fetch('http://localhost:8000/create', {
+        //     method: "POST",
+        //     headers: {
+        //         'Content-type': 'application/json'
+        //     },
+        //     body: post
+        // })
+        // .then((result) => result.json())
+        // .then((info) => { console.log(info); })
     };
 
     return(
