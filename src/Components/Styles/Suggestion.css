@@ -1,31 +1,32 @@
-/* The Actual Blog */
+/* The Actual Blog Suggestion*/
 .blogPreview {
-    border-radius: 5px !important;
-    background-color: white !important;
-    height: fit-content !important;
-    padding: 20px !important;
-    width: 94.5% !important;
-    margin: 10px !important;
-    margin-top: 13px !important;
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+  width: 96%;
+  margin-left: 7px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
-.goToBtn{
-    border: none;
-    background-color: #eaeaea;
-    width: 100% !important;
-    color: black;
-    padding: 10px 20px !important;
-    font-size: 14px;
-    font-weight: 900;
-    margin-top: 15px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    transition: all 0.2s ease;
+.goToBtn {
+  border: none;
+  background-color: #eaeaea;
+  width: 100%;
+  color: black;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 900;
+  margin-top: 15px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
 }
-.goToBtn:hover{
-    background-color: var(--mainTheme);
-    width: 100%;
-    color: white;
-    cursor: pointer;
-    transition: all 0.2s ease;
+
+.goToBtn:hover {
+  background-color: var(--mainTheme);
+  width: 100%;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }

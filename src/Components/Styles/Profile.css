@@ -1,112 +1,81 @@
-*{
-    transition: all 0.2s ease;
-    scroll-behavior: smooth;
+.layout {
+  display: flex;
+  padding: 15px;
 }
 
-#profile{
-    display: flex;
+.sidebar {
+  background-color: white;
+  width: 500px;
+  padding: 15px;
+  margin-right: 15px;
+  border-radius: 5px;
+  height: fit-content;
+  user-select: none;
 }
 
-.profileSection{
-    background-color: white;
-    width: 500px;
-    height: fit-content;
-    margin: 15px;
-    padding: 20px;
-    border-radius: 5px;
-    user-select: none;
-}
-
-.authorName{
-    font-weight: 800;
-    font-size: 30px;
+.authorName {
+  font-weight: 800;
+  font-size: 30px;
 }
 
 /* Suggested Posts */
-.suggestionContainer{
-    vertical-align: middle;
-    width: fit-content;
-    background-color: #f3f3f3;
-    align-items: center;
-    padding-top: 5px;
-    padding-left: 2% !important;
-    padding-right: 3% !important;
-    padding-bottom: 2%;
-    border-radius: 5px;
-    margin-top: 20px;
+.suggestionContainer {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 5px;
+  padding-bottom: 2px !important;
 }
 
- .suggestionText{
-     margin-left: 20px;
+.suggestionText{
      font-weight: 600;
      font-size: 12px;
      text-transform: uppercase;
-     letter-spacing: 1.2px;
-     color: #ccc;
+     letter-spacing: 1.1px;
+     color: rgb(184, 184, 184);
+     margin-left: 10px;
+     margin-bottom: 5px;
+     padding: 5px;
  }
 
-h6{
-    font-weight: 700;
-    color: #444;
-    font-size: 13px;
-    letter-spacing: 1.1px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    user-select: none;
+h6 {
+  font-weight: 700;
+  color: #444;
+  font-size: 13px;
+  letter-spacing: 1.1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  user-select: none;
 }
 
-.aboutSection{
-    color: gray;
-    margin-bottom: 25px;
+.aboutSection {
+  color: gray;
+  margin-bottom: 25px;
 }
 
-.blog{
-    padding: 20px;
+.mainParagraphs {
+  font-size: 16px;
+  line-height: 1.4;
 }
 
-.mainParagraphs{
-    font-size: 16px;
-    line-height: 1.4;
+.mainParagraphs:not(:last-child) {
+  margin-bottom: 25px;
 }
 
-.mainParagraphs:not(:last-child){
-    margin-bottom: 25px;
-}
-
-.contentContainer{
-    background-color: white;
-    width: 100%;
-    height: fit-content;
-    margin: 15px;
-    padding: 20px;
-    border-radius: 5px;
-    margin-left: 0px;
-    margin-bottom: 15px;
-}
-
-.viewAllButton{
-    border: none !important;
-    background-color: var(--mainTheme) !important;
-    width: 150%;
-    text-decoration: none !important;
-    color: rgb(255, 255, 255) !important;
-    padding: 10px 20px !important;
-    margin-bottom: 10px;
-    font-size: 14px !important;
-    font-weight: 900;
-    border-radius: 5px !important;
-    text-transform: uppercase !important;
-    transition: all 0.2s ease !important;
-}
-
-.viewAllButton:hover{
-    transform: scale(1.008);
-    cursor: pointer;
-    transition: all 0.2s ease !important;
+.contentContainer {
+  background-color: white;
+  /* height: 100px; */
+  width: 90%;
+  /* width: 100px; */
+  /* width: 100%; */
+  /* height: fit-content; */
+  /* margin: 15px; */
+  padding: 20px;
+  border-radius: 5px;
 }
 
 /* Blog Post View */
-.blogTitle{
+/* .blogTitle{
     font-weight: 800;
     font-size: 32px;
     user-select: none;
@@ -121,8 +90,8 @@ h2{
 .otherBlogs{
     margin: auto;
     display: flex;
-}
-
+} */
+/* 
 .blogPreview {
     border-radius: 5px;
     background-color: white;
@@ -133,22 +102,65 @@ h2{
     height: fit-content;
     padding: 20px;
     width: 33%;
-}
+} */
 
-@media(max-width: 1000px){
-    .profileSection{
+@media(max-width: 1200px){
+    .sidebar{
         display: none;
     }
 
     .contentContainer{
-        margin: 0;
-        transition: all 0.5s ease;
+        margin: -15px;
+        width: 105%;
+        border-radius: 0;
+        transition: all 0.2s ease;
     }
 
-    .viewAllButton{
-        width: 50% !important;
-        font-size: 50% !important;
-        content: "View All";
-    }
 
 }
+
+.cta {
+  display: inline-flex;
+}
+
+.cta > *:not(:last-child) {
+  margin-right: 8px;
+}
+
+.btn {
+  border: none !important;
+  background-color: var(--mainTheme);
+  text-decoration: none !important;
+  color: rgb(255, 255, 255) !important;
+  padding: 12px 20px;
+  font-size: 14px;
+  /* display: inline-block; */
+  /* margin-right: 3%; */
+  font-weight: 900;
+  border-radius: 5px !important;
+  text-transform: uppercase !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn:hover {
+  background-color: #2a2a2a;
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: all 0.2s ease !important;
+}
+
+/* @media(max-width: 1560px) {
+    .btn {
+        font-size: 1.8vh;
+        font-weight: 700;
+        width: fit-content;
+    }
+    .btn:not(:last-child){
+        margin-top: 10px !important;
+    }
+
+    .createButton{
+        display: block;
+    }
+
+} */

@@ -36,6 +36,9 @@
     transform: scale(1.03);
     cursor: pointer;
 }
+.blogSnippet:active{
+    transform: scale(1.02);
+}
 
 .biggerFont{
     font-size: 150%;
