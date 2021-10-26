@@ -1,6 +1,5 @@
 import './App.css';
 import Profile from './Components/Profile';
-import SingleBlogView from './Components/SinglePostView';
 
 function App() {
 

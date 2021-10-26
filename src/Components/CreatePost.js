@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import './Styles/CreatePost.css'
 
 function CreatePost() {
 
@@ -32,14 +33,65 @@ function CreatePost() {
     };
 
     return(
-        <form className='postForm' onSubmit={submitButton}>
-            <input type='text' name='author' onChange={handleChange}/>
-            <input type='text' name='title' onChange={handleChange}/>
-            <input type='textarea' name='summary' onChange={handleChange}/>
-            <input type='textarea' name='content' onChange={handleChange}/>
-            <input className='submitButton' type='submit'/>
+        <div className='formContainer'>
+            <form className='postForm' onSubmit={submitButton}>
 
-        </form>
+                {/* Author */}
+                <h2 className='label'>
+                    Author
+                </h2>
+                <input
+                className='authorInput'
+                type='text' 
+                name='author' 
+                placeholder='e.g. Hackathon' 
+                onChange={handleChange}
+                />
+
+                {/* Title */}
+                <h2 className='label'>
+                    Blog Title
+                </h2>
+                <input 
+                className='titleInput'
+                type='text' 
+                name='title' 
+                placeholder='e.g. How We Made a CMS App in Less Than a Month that actually *kinda* works!' 
+                onChange={handleChange}
+                />
+
+                {/* Summary */}
+                <h2 className='label'>
+                    Short Summary
+                </h2>
+                <input 
+                className='summaryInput'
+                type='textarea' 
+                name='summary' 
+                placeholder='e.g. Lorem ipsum dolor sit amet, consectetur adipiscing elit.' 
+                onChange={handleChange}
+                />
+
+                {/* Main Content */}
+                <h2 className='label'>
+                    Content
+                </h2>
+                <input 
+                className='contentInput'
+                type='textarea' 
+                name='content' 
+                placeholder='< Insert RTE Here >' 
+                onChange={handleChange}
+                />
+
+                {/* Button */}
+                <input
+                className='submitButton' 
+                type='submit'
+                />
+            </form>
+        </div>
+          
     )
 
 }
