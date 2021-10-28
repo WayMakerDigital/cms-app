@@ -1,16 +1,20 @@
 import React from "react";
-import axios from 'axios';
-import { useState } from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { useParams, useHistory } from 'react-router-dom';
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import "./Styles/CreatePost.css";
 
-function CreatePost() {
+function UpdatePost() {
   const [post, setPost] = useState({
-    title: "",
-    summary: "",
-    content: "",
+    // title: "",
+    // summary: "",
+    // content: "",
   });
+
+  let { id } = useParams();
+  let history = useHistory();
 
   // Backup Code
   const handleChange = (e) => {
@@ -22,14 +26,28 @@ function CreatePost() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(post);
-    const response = await axios.post("http://localhost:8000/create", post);
+    const response = await axios.patch(`http://localhost:8000/blog/${id}`, post);
     console.log(response);
+    let path = `../single/${id}`;
+    history.push(path);
   };
+
+  useEffect(() => {
+    
+    async function fetchAPI() {
+        const response = await axios.get(`http://localhost:8000/blog/${id}`);
+        setPost(response.data.singlepost);
+    }
+    fetchAPI()
+    
+  }, []);
 
   return (
     <div className="formContainer">
-      <h1 className="formTitle">Create Blog Post</h1>
-      <p className="formDescription">Please enter a Title, Summary and Blog Content to create a post.</p>
+      <h1 className="formTitle">Update Blog Post</h1>
+      <p className="formDescription">
+        Please enter a Title, Summary and Blog Content to create a post.
+      </p>
       <hr />
       <form className="postForm" onSubmit={handleSubmit}>
         {/* Title */}
@@ -39,6 +57,7 @@ function CreatePost() {
           type="text"
           name="title"
           placeholder='e.g. "How to Bake a Cake"'
+          value={post.title}
           onChange={handleChange}
         />
 
@@ -49,6 +68,7 @@ function CreatePost() {
           type="textarea"
           name="summary"
           placeholder="Summary must be no longer than 2 sentences."
+          value={post.summary}
           onChange={handleChange}
         />
 
@@ -57,7 +77,7 @@ function CreatePost() {
         <div className="editor">
           <CKEditor
             editor={ClassicEditor}
-            data=""
+            data={post.content}
             onReady={(editor) => {
               // You can store the "editor" and use when it is needed.
               console.log("Editor is ready to use!", editor);
@@ -68,12 +88,11 @@ function CreatePost() {
             }}
           />
         </div>
-        <hr className='closing'/>
+        <hr className="closing" />
         {/* Button */}
         <input className="submitButton" type="submit" />
       </form>
     </div>
   );
 }
-
-export default CreatePost;
+export default UpdatePost;
