@@ -1,19 +1,15 @@
-*{
-    transition: all 0.2s ease;
-    scroll-behavior: smooth;
-}
-
-#profile{
+.layout {
     display: flex;
+    padding: 15px;
 }
 
-.profileSection{
+.sidebar {
     background-color: white;
     width: 500px;
-    height: fit-content;
-    margin: 15px;
-    padding: 20px;
+    padding: 15px;
+    margin-right: 15px;
     border-radius: 5px;
+    height: fit-content;
     user-select: none;
 }
 
@@ -23,29 +19,26 @@
 }
 
 /* Suggested Posts */
-.suggestionContainer{
-    vertical-align: middle;
-    width: fit-content;
-    background-color: #f3f3f3;
-    align-items: center;
-    padding-top: 5px;
-    padding-left: 2% !important;
-    padding-right: 3% !important;
-    padding-bottom: 2%;
+.suggestionContainer {
+    background-color: #f0f0f0;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 15px;
+    padding: 5px;
+    padding-bottom: 2px !important;
 }
 
- .suggestionText{
-     margin-left: 20px;
+.suggestionText{
      font-weight: 600;
      font-size: 12px;
      text-transform: uppercase;
      letter-spacing: 1.2px;
      color: #ccc;
- }
+     margin-left: 10px;
+     margin-bottom: 5px;
+     padding: 5px;
+}
 
-h6{
+ h6 {
     font-weight: 700;
     color: #444;
     font-size: 13px;
@@ -55,10 +48,10 @@ h6{
     user-select: none;
 }
 
-.aboutSection{
+.aboutSection {
     color: gray;
     margin-bottom: 25px;
-}
+  }
 
 .blog{
     padding: 20px;
@@ -69,86 +62,58 @@ h6{
     line-height: 1.4;
 }
 
-.mainParagraphs:not(:last-child){
+.mainParagraphs:not(:last-child) {
     margin-bottom: 25px;
 }
 
-.contentContainer{
+.contentContainer {
     background-color: white;
-    width: 100%;
-    height: fit-content;
-    margin: 15px;
+    width: 90%;
     padding: 20px;
     border-radius: 5px;
-    margin-left: 0px;
-    margin-bottom: 15px;
 }
 
-.viewAllButton{
-    border: none !important;
-    background-color: var(--mainTheme) !important;
-    width: 150%;
-    text-decoration: none !important;
-    color: rgb(255, 255, 255) !important;
-    padding: 10px 20px !important;
-    margin-bottom: 10px;
-    font-size: 14px !important;
-    font-weight: 900;
-    border-radius: 5px !important;
-    text-transform: uppercase !important;
-    transition: all 0.2s ease !important;
-}
-
-.viewAllButton:hover{
-    transform: scale(1.008);
-    cursor: pointer;
-    transition: all 0.2s ease !important;
-}
-
-/* Blog Post View */
-.blogTitle{
-    font-weight: 800;
-    font-size: 32px;
-    user-select: none;
-    margin-bottom: 5px;
-}
-h2{
-    margin-top: 10px;
-    margin-bottom: 2px;
-    font-size: 20px;
-    user-select: none;
-}
-.otherBlogs{
-    margin: auto;
-    display: flex;
-}
-
-.blogPreview {
-    border-radius: 5px;
-    background-color: white;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-    height: fit-content;
-    padding: 20px;
-    width: 33%;
-}
-
-@media(max-width: 1000px){
-    .profileSection{
+@media(max-width: 1200px){
+    .sidebar{
         display: none;
     }
 
     .contentContainer{
-        margin: 0;
-        transition: all 0.5s ease;
+        margin: -15px;
+        width: 105%;
+        border-radius: 0;
+        transition: all 0.2s ease;
     }
 
-    .viewAllButton{
-        width: 50% !important;
-        font-size: 50% !important;
-        content: "View All";
-    }
 
+}
+
+.cta {
+  display: inline-flex;
+}
+
+.cta > *:not(:last-child) {
+  margin-right: 8px;
+}
+
+.btn {
+  border: none !important;
+  background-color: var(--mainTheme);
+  text-decoration: none !important;
+  color: rgb(255, 255, 255) !important;
+  padding: 12px 20px;
+  font-size: 14px;
+  /* display: inline-block; */
+  /* margin-right: 3%; */
+  font-weight: 900;
+  border-radius: 5px !important;
+  text-transform: uppercase !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn:hover {
+  background-color: #2a2a2a;
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: all 0.2s ease !important;
 }

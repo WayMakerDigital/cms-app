@@ -6,6 +6,8 @@
     padding: 0;
     margin: 0;
     font-family: 'Be Vietnam Pro', sans-serif;
+    text-decoration: none;
+    transition: all 0.2s ease;
 }
 
 .navBar{
@@ -14,10 +16,14 @@
     color: white;
     font-weight: 900;
 }
-
 .navBarText{
     font-weight: 800;
     padding: 5px 10px;
     user-select: none !important;
+    font-size: 28px;
+    color: white;
+}
+.navBarText:hover{
     font-size: 30px;
+    transition: all 0.2s ease;
 }
