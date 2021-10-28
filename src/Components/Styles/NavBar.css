@@ -16,7 +16,6 @@
     color: white;
     font-weight: 900;
 }
-
 .navBarText{
     font-weight: 800;
     padding: 5px 10px;
@@ -27,7 +26,4 @@
 .navBarText:hover{
     font-size: 30px;
     transition: all 0.2s ease;
-}
-.navBarText:active{
-    font-size: 25px;
 }

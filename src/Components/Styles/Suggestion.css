@@ -30,3 +30,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
 }
+
+.goToBtn:active{
+  font-size: 90%;
+}

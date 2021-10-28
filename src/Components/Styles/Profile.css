@@ -1,56 +1,60 @@
 .layout {
-  display: flex;
-  padding: 15px;
+    display: flex;
+    padding: 15px;
 }
 
 .sidebar {
-  background-color: white;
-  width: 500px;
-  padding: 15px;
-  margin-right: 15px;
-  border-radius: 5px;
-  height: fit-content;
-  user-select: none;
+    background-color: white;
+    width: 500px;
+    padding: 15px;
+    margin-right: 15px;
+    border-radius: 5px;
+    height: fit-content;
+    user-select: none;
 }
 
-.authorName {
-  font-weight: 800;
-  font-size: 30px;
+.authorName{
+    font-weight: 800;
+    font-size: 30px;
 }
 
 /* Suggested Posts */
 .suggestionContainer {
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  margin-top: 15px;
-  padding: 5px;
-  padding-bottom: 2px !important;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 5px;
+    padding-bottom: 2px !important;
 }
 
 .suggestionText{
      font-weight: 600;
      font-size: 12px;
      text-transform: uppercase;
-     letter-spacing: 1.1px;
-     color: rgb(184, 184, 184);
+     letter-spacing: 1.2px;
+     color: #ccc;
      margin-left: 10px;
      margin-bottom: 5px;
      padding: 5px;
- }
+}
 
-h6 {
-  font-weight: 700;
-  color: #444;
-  font-size: 13px;
-  letter-spacing: 1.1px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  user-select: none;
+ h6 {
+    font-weight: 700;
+    color: #444;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    user-select: none;
 }
 
 .aboutSection {
-  color: gray;
-  margin-bottom: 25px;
+    color: gray;
+    margin-bottom: 25px;
+  }
+
+.blog{
+    padding: 20px;
 }
 
 .mainParagraphs {
@@ -59,50 +63,15 @@ h6 {
 }
 
 .mainParagraphs:not(:last-child) {
-  margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 .contentContainer {
-  background-color: white;
-  /* height: 100px; */
-  width: 90%;
-  /* width: 100px; */
-  /* width: 100%; */
-  /* height: fit-content; */
-  /* margin: 15px; */
-  padding: 20px;
-  border-radius: 5px;
-}
-
-/* Blog Post View */
-/* .blogTitle{
-    font-weight: 800;
-    font-size: 32px;
-    user-select: none;
-    margin-bottom: 5px;
-}
-h2{
-    margin-top: 10px;
-    margin-bottom: 2px;
-    font-size: 20px;
-    user-select: none;
-}
-.otherBlogs{
-    margin: auto;
-    display: flex;
-} */
-/* 
-.blogPreview {
-    border-radius: 5px;
     background-color: white;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-    height: fit-content;
+    width: 90%;
     padding: 20px;
-    width: 33%;
-} */
+    border-radius: 5px;
+}
 
 @media(max-width: 1200px){
     .sidebar{
@@ -115,8 +84,6 @@ h2{
         border-radius: 0;
         transition: all 0.2s ease;
     }
-
-
 }
 
 .cta {
@@ -134,8 +101,6 @@ h2{
   color: rgb(255, 255, 255) !important;
   padding: 12px 20px;
   font-size: 14px;
-  /* display: inline-block; */
-  /* margin-right: 3%; */
   font-weight: 900;
   border-radius: 5px !important;
   text-transform: uppercase !important;
@@ -148,19 +113,3 @@ h2{
   transform: scale(1.02);
   transition: all 0.2s ease !important;
 }
-
-/* @media(max-width: 1560px) {
-    .btn {
-        font-size: 1.8vh;
-        font-weight: 700;
-        width: fit-content;
-    }
-    .btn:not(:last-child){
-        margin-top: 10px !important;
-    }
-
-    .createButton{
-        display: block;
-    }
-
-} */
