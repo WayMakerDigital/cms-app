@@ -8,7 +8,6 @@ const AllBlogs = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    
     async function fetchMyAPI() {
       const response = await axios.get('http://localhost:8000/allposts');
       console.log(response);
@@ -20,15 +19,9 @@ const AllBlogs = () => {
   return (
     <div className="marginBox">
       <div>
-          {
-              posts.map((post) => {
-                  return (
-                      <Blog 
-                      post={post}
-                      />
-                  )
-              })
-          }
+        {posts.map((post) => {
+          return <Blog post={post} />;
+        })}
       </div>
     </div>
   );

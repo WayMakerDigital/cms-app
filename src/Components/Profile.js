@@ -52,7 +52,7 @@ function Profile() {
     }
 
     return(
-        // Profile Section
+    // Profile Section
         <div className='layout'>
             <div className='sidebar'>
                 <h1 className='authorName'>{userName}</h1>
@@ -76,4 +76,4 @@ function Profile() {
     )
 }
 
-export default Profile;
+export default Profile; 
