@@ -2,6 +2,8 @@ import React from 'react';
 import './Styles/NavBar.css';
 import { Link } from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
+
 const logoName = 'BLOG';
 
 function NavBar() {

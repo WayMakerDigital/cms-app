@@ -57,9 +57,9 @@
     padding: 20px;
 }
 
-.mainParagraphs{
-    font-size: 16px;
-    line-height: 1.4;
+.mainParagraphs {
+  font-size: 16px;
+  line-height: 1.4;
 }
 
 .mainParagraphs:not(:last-child) {
@@ -84,8 +84,6 @@
         border-radius: 0;
         transition: all 0.2s ease;
     }
-
-
 }
 
 .cta {
@@ -103,8 +101,6 @@
   color: rgb(255, 255, 255) !important;
   padding: 12px 20px;
   font-size: 14px;
-  /* display: inline-block; */
-  /* margin-right: 3%; */
   font-weight: 900;
   border-radius: 5px !important;
   text-transform: uppercase !important;
