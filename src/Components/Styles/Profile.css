@@ -113,3 +113,16 @@
   transform: scale(1.02);
   transition: all 0.2s ease !important;
 }
+
+.btn:not(:last-child){
+  margin-right: 10px;
+}
+
+.deleteBtn{
+  background-color: rgb(177, 20, 33) !important;
+}
+
+.deleteBtn, .editBtn{
+  margin-top: 10px;
+  padding: 10px 30px;
+}

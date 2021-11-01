@@ -59,7 +59,7 @@ input, select {
 }
 input:focus{
     border-color: #4258f9;
-    box-shadow: 0px 3px 25px rgba(163, 163, 163, 0.2);
+    box-shadow: 0px 3px 25px rgba(119, 119, 119, 0.2);
     outline: none;
 }
 

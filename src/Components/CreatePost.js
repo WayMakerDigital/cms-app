@@ -1,6 +1,7 @@
 import React from "react";
 import axios from 'axios';
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import "./Styles/CreatePost.css";
@@ -11,6 +12,8 @@ function CreatePost() {
     summary: "",
     content: "",
   });
+
+  var history = useHistory();
 
   // Backup Code
   const handleChange = (e) => {
@@ -24,6 +27,8 @@ function CreatePost() {
     console.log(post);
     const response = await axios.post("http://localhost:8000/create", post);
     console.log(response);
+    var path = '../AllBlogs';
+    history.push(path)
   };
 
   return (
