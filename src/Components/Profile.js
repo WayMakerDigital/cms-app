@@ -1,30 +1,55 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { Link, useParams, useHistory } from 'react-router-dom';
+import { useEffect, useState } from "react";
 import Suggestion from './Suggestion';
 import './Styles/Profile.css';
 import SinglePostView from './SinglePostView';
 
 function Profile() {
 
-    const test = () => {
-        fetch('http://localhost:8000/test', {
-            method: "get",
-            headers: {
-                'Content-type': 'application/json'
-            },
-        })
-        .then(res => {
-            const tester = res.data;
-            console.log(tester);
-          });
+    const [post, setPost] = useState({
+        author: '',
+        title: '',
+        content: '',
+    });
 
-    }
+    let { id } = useParams();
 
+    const history = useHistory();
+
+    useEffect(() => {
+      
+        async function fetchMyAPI() {
+          const response = await axios.get(`http://localhost:8000/blog/${id}`);
+          // console.log(response);
+          setPost(response.data.singlepost);
+        }
+        fetchMyAPI()
+    }, []);
     
     // All Variables.
     const authBadge = 'author';
     var userName = 'Hackathon';
     var authorDesc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis rhoncus dui ut semper. Morbi suscipit mollis arcu vitae sollicitudin."
+
+    const handleEdit = () => {
+        let path = `../Update/${id}`;
+        history.push(path);
+    }
+
+    const handleDelete = () => {
+        if (window.confirm("Are you sure?")) {
+            confirmDelete()
+            let path = '../allblogs';
+            history.push(path);
+        }
+    }
+
+    const confirmDelete = async () => {
+        const response = await axios.delete(`http://localhost:8000/blog/${id}`);
+        console.log(response);
+    }
 
     return(
     // Profile Section
@@ -43,8 +68,10 @@ function Profile() {
                     <Suggestion />
                     <Suggestion />
                 </div>
+                <button onClick={handleDelete}>Delete</button>
+                <button onClick={handleEdit}>Edit</button>
             </div>
-            <SinglePostView />
+            <SinglePostView post={post} />
         </div>
     )
 }
