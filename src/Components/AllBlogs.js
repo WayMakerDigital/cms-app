@@ -15,7 +15,7 @@ const AllBlogs = () => {
     }
     fetchMyAPI()
   }, []);
-
+  
   return (
     <div className="marginBox">
       <div>

@@ -7,6 +7,11 @@ import './Styles/Profile.css';
 import SinglePostView from './SinglePostView';
 
 function Profile() {
+    const [posts, setPosts] = useState([
+        {id: 1, title: "a string"},
+        {id: 2, title: "another string"},
+        {id: 3, title: "a string"},
+    ]);
 
     const [post, setPost] = useState({
         author: '',
@@ -19,6 +24,15 @@ function Profile() {
     const history = useHistory();
 
     useEffect(() => {
+        async function fetchMyData() {
+          const responses = await axios.get('http://localhost:8000/allposts');
+          console.log(responses.data);
+          setPosts(responses.data);
+        }
+        fetchMyData()
+    }, []);
+
+    useEffect(() => {
       
         async function fetchMyAPI() {
           const response = await axios.get(`http://localhost:8000/blog/${id}`);
@@ -26,7 +40,7 @@ function Profile() {
           setPost(response.data.singlepost);
         }
         fetchMyAPI()
-    }, []);
+    }, [id]);
     
     // All Variables.
     const authBadge = 'author';
@@ -64,9 +78,9 @@ function Profile() {
                 </div>
                 <div className='suggestionContainer'>
                     <h2 className='suggestionText'>Suggestions</h2>
-                    <Suggestion />
-                    <Suggestion />
-                    <Suggestion />
+                    <Suggestion post={posts[0]} />
+                    <Suggestion post={posts[1]} />
+                    <Suggestion post={posts[2]} />
                 </div>
                 <button onClick={handleDelete}>Delete</button>
                 <button onClick={handleEdit}>Edit</button>
