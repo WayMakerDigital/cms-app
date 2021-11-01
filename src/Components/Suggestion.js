@@ -1,16 +1,24 @@
 import React from "react";
+import {useHistory } from 'react-router-dom';
 import "./Styles/Suggestion.css";
 
-function Suggestion() {
+const Suggestion = ({ post }) => {
   var blogSuggestionTitle = "We made a title for this post.";
-  var blogSuggestionDescription = "So you didn't have to";
+  // var blogSuggestionDescription = "So you didn't have to";
+  const history = useHistory();
+
+  const handleClick = () => {
+    let path = `../single/${post.id}`;
+    history.push(path);
+}
+
 
   return (
     <div className="suggestedContainer">
       <div className="blogPreview">
-        <h3>{blogSuggestionTitle}</h3>
-        <p>{blogSuggestionDescription}</p>
-        <button className="goToBtn">Go To Blog</button>
+        <h3>{post.title}</h3>
+        {/* <p>{blogSuggestionDescription}</p> */}
+        <button className="goToBtn" onClick={handleClick}>Go To Blog</button>
       </div>
     </div>
   );
