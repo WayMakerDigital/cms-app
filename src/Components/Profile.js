@@ -6,9 +6,23 @@ import SinglePostView from './SinglePostView';
 
 function Profile() {
 
+    const test = () => {
+        fetch('http://localhost:8000/test', {
+            method: "get",
+            headers: {
+                'Content-type': 'application/json'
+            },
+        })
+        .then(res => {
+            const tester = res.data;
+            console.log(tester);
+          });
+
+    }
+
     
     // All Variables.
-    const authBadge = 'DEMONSTRATION';
+    const authBadge = 'author';
     var userName = 'Hackathon';
     var authorDesc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis rhoncus dui ut semper. Morbi suscipit mollis arcu vitae sollicitudin."
 
