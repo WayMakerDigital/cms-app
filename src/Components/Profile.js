@@ -37,7 +37,7 @@ function Profile() {
         async function fetchMyAPI() {
           const response = await axios.get(`http://localhost:8000/blog/${id}`);
           // console.log(response);
-          setPost(response.data.singlepost);
+          setPost(response.data.singlePost);
         }
         fetchMyAPI()
     }, [id]);
@@ -82,8 +82,8 @@ function Profile() {
                     <Suggestion post={posts[1]} />
                     <Suggestion post={posts[2]} />
                 </div>
-                <button onClick={handleDelete}>Delete</button>
-                <button onClick={handleEdit}>Edit</button>
+                <button className='deleteBtn btn' onClick={handleDelete}>Delete</button>
+                <button className='editBtn btn' onClick={handleEdit}>Edit</button>
             </div>
             <SinglePostView post={post} />
         </div>

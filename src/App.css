@@ -1,3 +1,7 @@
+*{
+  text-decoration: none;
+}
+
 :root{
   --mainTheme: #19181e;
   --mainBG: rgb(224, 224, 224);

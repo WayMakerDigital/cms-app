@@ -36,7 +36,7 @@ function UpdatePost() {
     
     async function fetchAPI() {
         const response = await axios.get(`http://localhost:8000/blog/${id}`);
-        setPost(response.data.singlepost);
+        setPost(response.data.singlePost);
     }
     fetchAPI()
     

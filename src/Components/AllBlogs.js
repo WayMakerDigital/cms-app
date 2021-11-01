@@ -3,6 +3,7 @@ import axios from 'axios';
 import Blog from "./Blog";
 import "./Styles/AllBlogs.css";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const AllBlogs = () => {
   const [posts, setPosts] = useState([]);
@@ -23,6 +24,10 @@ const AllBlogs = () => {
           return <Blog post={post} />;
         })}
       </div>
+      <Link to='/CreatePost'>
+      <button className='createPostButton'>Create Post</button>
+      </Link>
+      
     </div>
   );
 };
