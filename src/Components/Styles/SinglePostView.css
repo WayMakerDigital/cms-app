@@ -8,4 +8,8 @@ h2{
     margin-top: 10px;
     margin-bottom: 2px;
     font-size: 20px;
+    user-select: none !important;
+}
+h1{
+    user-select: none !important;
 }

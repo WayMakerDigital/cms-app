@@ -18,17 +18,16 @@ const AllBlogs = () => {
   }, []);
   
   return (
-    <div className="marginBox">
-      <div>
+    <>
+      <div className='allBlogsContainer'>
         {posts.map((post) => {
           return <Blog post={post} />;
         })}
       </div>
       <Link to='/CreatePost'>
-      <button className='createPostButton'>Create Post</button>
+      <button className='createPostButton'>+</button>
       </Link>
-      
-    </div>
+    </>
   );
 };
 

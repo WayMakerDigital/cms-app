@@ -90,7 +90,7 @@ function UpdatePost() {
         </div>
         <hr className="closing" />
         {/* Button */}
-        <input className="submitButton" type="submit" />
+        <input className="submitButton" type="submit"/>
       </form>
     </div>
   );
