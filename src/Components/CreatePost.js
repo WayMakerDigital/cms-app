@@ -78,6 +78,7 @@ function CreatePost() {
       <hr />
       <form className="postForm" method="post" onSubmit={handleSubmit}>
         <h6 className='label'>Blog Image</h6>
+        <p className='dimensions'><strong>Recommended Image Resolution: </strong>1920x1080</p>
         <input 
         className='noBorder'
         type="file"

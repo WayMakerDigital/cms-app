@@ -16,9 +16,8 @@ const Suggestion = ({ post }) => {
   return (
     <div className="suggestedContainer">
       <div className="blogPreview">
-        <h3>{post.title}</h3>
-        <h4>{readTime}</h4>  
-        {/* <p>{blogSuggestionDescription}</p> */}
+        <h3 className='blogTitle'>{post.title}</h3>
+        <h6>{readTime}</h6>
         <button className="goToBtn" onClick={handleClick}>Go To Blog</button>
       </div>
     </div>
