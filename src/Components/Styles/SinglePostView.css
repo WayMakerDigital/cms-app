@@ -2,7 +2,7 @@
 .blogTitle{
     font-weight: 800;
     font-size: 30px;
-    user-select: none;
+    user-select: none !important;
 }
 h2{
     margin-top: 10px;

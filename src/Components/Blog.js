@@ -19,7 +19,7 @@ const Blog = ({ post }) => {
         <Link to={`/single/${post.id}`}>
         <div className='blogSnippet'>
             <div>
-                <img className='blogImg' src={url} alt="Placeholder" width="640" height="353" />
+                <img className='blogImg' src={url} alt="Placeholder"/>
                 <h3 className='biggerFont'>{post.title}</h3>
                 <h6>{readTime}</h6>
                 <h3>Description</h3>
