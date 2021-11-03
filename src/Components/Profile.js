@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Link, useParams, useHistory } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import Suggestion from './Suggestion';
 import './Styles/Profile.css';
@@ -73,8 +73,8 @@ function Profile() {
                 <h6 className='authorBadge'>{authBadge}</h6>
                 <p className='aboutSection'>{authorDesc}</p>
                 <div className="cta">
-                <Link to='/allblogs' className='viewAllButton btn'>View All blogs</Link>
-                <Link to='/CreatePost' className='createPostBtn btn'>Create Post</Link>
+                {/* <Link to='/' className='viewAllButton btn'>View All blogs</Link> */}
+                {/* <Link to='/CreatePost' className='createPostBtn btn'>Create Post</Link> */}
                 </div>
                 <div className='suggestionContainer'>
                     <h2 className='suggestionText'>Suggestions</h2>
@@ -82,8 +82,13 @@ function Profile() {
                     <Suggestion post={posts[1]} />
                     <Suggestion post={posts[2]} />
                 </div>
-                <button className='deleteBtn btn' onClick={handleDelete}>Delete</button>
-                <button className='editBtn btn' onClick={handleEdit}>Edit</button>
+                <hr />
+                <div className="actionContainer alignItems">
+                    <h4 className='actionText'>Post Actions</h4>
+                    <button className='editBtn btn' onClick={handleEdit}>Edit</button>
+                    <button className='deleteBtn btn' onClick={handleDelete}>Delete</button>
+                </div>
+                
             </div>
             <SinglePostView post={post} />
         </div>

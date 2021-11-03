@@ -3,8 +3,6 @@ import {useHistory } from 'react-router-dom';
 import "./Styles/Suggestion.css";
 
 const Suggestion = ({ post }) => {
-  var blogSuggestionTitle = "We made a title for this post.";
-  // var blogSuggestionDescription = "So you didn't have to";
   const history = useHistory();
 
   const handleClick = () => {
