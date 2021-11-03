@@ -4,7 +4,7 @@ import { calculateReadtime } from "../Utils";
 import "./Styles/Suggestion.css";
 
 const Suggestion = ({ post }) => {
-  // var blogSuggestionDescription = "So you didn't have to";
+
   const history = useHistory();
 
   const handleClick = () => {
