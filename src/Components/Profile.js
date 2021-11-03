@@ -8,9 +8,9 @@ import SinglePostView from './SinglePostView';
 
 function Profile() {
     const [posts, setPosts] = useState([
-        {id: 1, title: "a string"},
-        {id: 2, title: "another string"},
-        {id: 3, title: "a string"},
+        {id: 1, title: "a string", content: ""},
+        {id: 2, title: "another string", content: ""},
+        {id: 3, title: "a string", content: ""},
     ]);
 
     const [post, setPost] = useState({
@@ -26,7 +26,6 @@ function Profile() {
     useEffect(() => {
         async function fetchMyData() {
           const responses = await axios.get('http://localhost:8000/allposts');
-          console.log(responses.data);
           setPosts(responses.data);
         }
         fetchMyData()
@@ -36,7 +35,6 @@ function Profile() {
       
         async function fetchMyAPI() {
           const response = await axios.get(`http://localhost:8000/blog/${id}`);
-          // console.log(response);
           setPost(response.data.singlePost);
         }
         fetchMyAPI()
@@ -78,9 +76,9 @@ function Profile() {
                 </div>
                 <div className='suggestionContainer'>
                     <h2 className='suggestionText'>Suggestions</h2>
-                    <Suggestion post={posts[0]} />
-                    <Suggestion post={posts[1]} />
-                    <Suggestion post={posts[2]} />
+                    {posts.filter((item, index) => index < 3).map((filteredItem) => {
+                        return <Suggestion post={filteredItem}  />
+                    })}
                 </div>
                 <button className='deleteBtn btn' onClick={handleDelete}>Delete</button>
                 <button className='editBtn btn' onClick={handleEdit}>Edit</button>
